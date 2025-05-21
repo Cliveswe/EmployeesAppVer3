@@ -10,7 +10,7 @@ namespace EmployeesApp.Web.Controllers
     public class EmployeesController(IEmployeeService service) : Controller
     {
 
-        [TypeFilter(typeof(MyServiceAttribute))]
+        [ServiceFilter(typeof(MyServiceAttribute))]
         [HttpGet("")]
         public IActionResult Index() {
             var model = service.GetAll();
