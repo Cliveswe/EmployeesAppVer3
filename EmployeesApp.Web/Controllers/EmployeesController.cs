@@ -10,7 +10,7 @@ namespace EmployeesApp.Web.Controllers
     public class EmployeesController(IEmployeeService service) : Controller
     {
 
-        [ServiceFilter(typeof(MyServiceAttribute))]
+        [TypeFilter(typeof(MyServiceAttribute), Arguments = new object[] { "This is a custom log message" })]
         [HttpGet("")]
         public IActionResult Index() {
             var model = service.GetAll();
