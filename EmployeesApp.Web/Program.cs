@@ -10,7 +10,6 @@ namespace EmployeesApp.Web
             app.UseStaticFiles();
             app.MapControllers();
             app.Run();
-            //hej från Philippe
         }
     }
 }
